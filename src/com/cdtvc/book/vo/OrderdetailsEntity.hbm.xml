@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.cdtvc.book.vo.OrderdetailsEntity" table="orderdetails" schema="book station">
+        <id name="orderDetailsId" column="OrderDetails_ID"/>
+        <property name="orderId" column="Order_ID"/>
+        <property name="bookId" column="Book_ID"/>
+        <property name="number" column="Number"/>
+    </class>
+</hibernate-mapping>
