@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
   Created by IntelliJ IDEA.
   UserEntity: Administrator
@@ -19,6 +20,16 @@
 </head>
 <body>
 <div class="container">
+    <s:if test="#session.error=='null'">
+        <div class="row">
+            <div class="col-6 col-lg-offset-3">
+                <div id="myAlert2" class="alert alert-warning">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    <strong>警告！</strong>您的网络连接有问题。
+                </div>
+            </div>
+        </div>
+    </s:if>
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <div class="page-header">
@@ -32,7 +43,6 @@
                         <input type="text" class="form-control" name="userEntity.userName"/>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label class="col-lg-3 control-label">手机号:</label>
                     <div class="col-lg-5">
